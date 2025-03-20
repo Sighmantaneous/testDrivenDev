@@ -38,5 +38,10 @@ public class CalcTest {
         assertEquals("/ by zero not allowed", ex.getMessage());
     }
 
+    @Test
+    void testMultSuccess()
+    {
+        assertEquals(16, myCalc.multiply(4,4));
+    }
 }
 
