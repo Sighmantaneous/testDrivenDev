@@ -9,6 +9,18 @@ public class Calculator {
         }
         return (int) result;
     }
+
+    public int divide(int firstNum, int secondNum){
+
+        if(secondNum == 0){
+            throw new ArithmeticException("/ by zero not allowed");
+        }
+        int result = firstNum / secondNum;
+
+
+        return result;
+    }
+
 }
 
 
