@@ -1,8 +1,7 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class CalcTest {
 
@@ -43,5 +42,17 @@ public class CalcTest {
     {
         assertEquals(16, myCalc.multiply(4,4));
     }
+<<<<<<< HEAD
+=======
+
+    @Test
+    void testMultFail()
+    {
+        assertNotEquals(16, myCalc.multiply(2,2));
+        Exception ex = assertThrows(UnsupportedOperationException.class, ()->{myCalc.multiply(Integer.MAX_VALUE,2);});
+        assertEquals("This result will be bigger than allow int size", ex.getMessage());
+    }
+
+>>>>>>> eae3a58 (Adding Tests for pass and fail for  Mult function.)
 }
 

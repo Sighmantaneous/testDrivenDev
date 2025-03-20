@@ -21,6 +21,14 @@ public class Calculator {
         return result;
     }
 
+    public int multiply(int firstNum, int secondNum){
+        long result = (long)firstNum * secondNum;
+        if(result > Integer.MAX_VALUE){
+            throw new UnsupportedOperationException("This result will be bigger than allow int size");
+        }
+        return(int) result;
+    }
+
 }
 
 
