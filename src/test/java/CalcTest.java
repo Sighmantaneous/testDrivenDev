@@ -49,5 +49,18 @@ public class CalcTest {
         Exception ex = assertThrows(UnsupportedOperationException.class, ()->{myCalc.multiply(Integer.MAX_VALUE,2);});
         assertEquals("This result will be bigger than allow int size", ex.getMessage());
     }
+
+    @Test
+    void testSubtractSuccess()
+    {
+        assertEquals(10, myCalc.subtract(20,10));
+    }
+    @Test
+    void testSubtactFail()
+    {
+        Exception ex = assertThrows(IllegalStateException.class, ()->{myCalc.subtract(10,20);});
+        assertEquals("Negative results not allowed", ex.getMessage());
+    }
+
 }
 
