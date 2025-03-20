@@ -56,7 +56,7 @@ public class CalcTest {
         assertEquals(10, myCalc.subtract(20,10));
     }
     @Test
-    void testSubtactFail()
+    void testSubtractFail()
     {
         Exception ex = assertThrows(IllegalStateException.class, ()->{myCalc.subtract(10,20);});
         assertEquals("Negative results not allowed", ex.getMessage());
