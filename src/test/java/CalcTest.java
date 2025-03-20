@@ -42,9 +42,6 @@ public class CalcTest {
     {
         assertEquals(16, myCalc.multiply(4,4));
     }
-<<<<<<< HEAD
-=======
-
     @Test
     void testMultFail()
     {
@@ -52,7 +49,5 @@ public class CalcTest {
         Exception ex = assertThrows(UnsupportedOperationException.class, ()->{myCalc.multiply(Integer.MAX_VALUE,2);});
         assertEquals("This result will be bigger than allow int size", ex.getMessage());
     }
-
->>>>>>> eae3a58 (Adding Tests for pass and fail for  Mult function.)
 }
 
